@@ -1,3 +1,4 @@
+# coding: utf-8
 require 'yaml'
 require 'standalone_migrations'
 StandaloneMigrations::Tasks.load_tasks

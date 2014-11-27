@@ -9,3 +9,11 @@
 *.secret
 /config/*
 !/config/*.sample
+
+db/*
+db/migrate/*
+!db/migrate/
+!db/migrate/sample/
+!.gitkeep
+
+.*.standalone_migrations
