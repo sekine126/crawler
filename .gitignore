@@ -1,8 +1,11 @@
 /*.lock
 /vendor/bundle
 /.bundle
-/log/*.log
+/log/*
+/sql/*
 /tmp
 *.swp
 *.project
 *.secret
+/config/*
+!/config/*.sample
