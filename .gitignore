@@ -1,0 +1,8 @@
+/*.lock
+/vendor/bundle
+/.bundle
+/log/*.log
+/tmp
+*.swp
+*.project
+*.secret

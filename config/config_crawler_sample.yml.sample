@@ -1,0 +1,61 @@
+### クローラーのユーザーエージェント
+robots_user_agent: Sample
+
+### mysql接続用パラメータ
+# 環境に合わせて指定
+mysql_config:
+  host: 127.0.0.1
+  user: root
+  password: sample
+  db_name: crawler_sample
+
+### スタートURLリストのファイル名
+start_urls_file: start_urls_sample.txt
+
+### リピートURLリストのファイル名
+repeat_urls_file: repeat_urls_sample.txt
+
+
+### htmlをスクレイピングする際に適用するXPath
+xpath_for_html: //a/@href
+
+### xmlをスクレイピングする際に適用するXPath
+xpath_for_xml: //rss/channel/item/link
+
+### 対象外とする拡張子の正規表現
+### (!ruby/regexpの後ろに設定)
+skip_extensions: !ruby/regexp /\.(asc|ASC|xsl|XSL|com|COM|cgi|CGI|txt|TXT|pl|PL|rar|RAR|lzh|LZH|rdf|RDF|wmz|WMZ|mso|MSO|pdf|PDF|gif|GIF|jpg|JPG|png|PNG|ico|ICO|css|CSS|sit|SIT|eps|EPS|wmf|WMF|zip|ZIP|ppt|PPT|mpg|MPG|xls|XLS|gz|GZ|rpm|RPM|tgz|TGZ|mov|MOV|exe|EXE|jpeg|JPEG|bmp|BMP|js|JS)$/
+
+### 対象外とするプロトコルの正規表現
+### (!ruby/regexpの後ろに設定)
+skip_protocols: !ruby/regexp /^(mailto|javascript|ftp|file):/
+
+### 優先的にクロールするリンクの正規表現
+### (!ruby/regexpの後ろに設定)
+priority_crawl_regexp: !ruby/regexp /odai\/\d+$|\/topic\//
+
+############## 数値設定 ##############
+
+### 前回までの実行で巡回したURLをクロールする時間[分]
+interval_minute_pre_queue: 720
+
+### クローラーにスタートページを再設定するまでの時間[分]
+interval_minute: 60
+
+### マルチスレッドの最大スレッド数
+max_threads: 4
+
+### クロールする深さ（何階層までクロールするか）
+depth_limit: 4
+
+### リンク情報取得後のスリープ時間の下限[秒]
+min_delay_sec: 30
+
+### 同スリープ時間の上限[秒]
+max_delay_sec: 60
+
+### タイムアウトと判定する制限時間[秒]
+timeout_sec: 10
+
+### クロールを終了するまでの時間[分]
+finish_minute: 1430
